@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
-  <title>Whiskey Recommender</title>
+  <title>HighProof Whiskey Recommender</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0 auto 0;
+      padding: 20px;
+      text-align: left;
+      max-width: 600px;
+    }
+    h1 {
+      font-size: 1.6rem;
+      color: #c5843f;
+    }
+    h2 {
+      font-size: 1.4rem;
+      color: #c5843f;
+    }
+    img {
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 30px;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      max-width: 400px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .recommendations {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .recommendations li {
+      margin: 10px 0;
+    }
+    input[type="submit"] {
+      background-color: #C78540; 
+      color: #fff; 
+      border: none; 
+      padding: 10px 20px; 
+      border-radius: 5px; 
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>Whiskey Recommender</h1>
+  <h1>Get Whiskey Recommendations</h1>
 
   <form method="POST" action="/whiskeyRecommend">
     <input type="text" name="whiskey_name" placeholder="Enter whiskey name" required />
@@ -25,5 +77,9 @@
       <p>{{ results.message or "No recommendations available." }}</p>
     {% endif %}
   {% endif %}
+    <hr>
+  <p>
+    HighProof is a whiskey recomendation app developed by Casked Coders at Carnegie Mellon Univeristy for 95829 - Software Design for Data Scientists | Spring 2025
+  </p>
 </body>
 </html>
